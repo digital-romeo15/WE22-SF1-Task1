@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMAteAI-Contact Page</title>
+
+    <style>
+         body{
+            font-family: 'Segoe UI', sans-serif;
+            background: rgb(185, 180, 180);
+            color: #333;
+        }
+
+        .navbar{
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+        }
+        .logo{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+
+        }
+          .nav-links{
+            list-style: none;
+            gap: 1.5em;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links a{
+            color: #333;
+            font-weight: 400;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 3px;
+
+        }
+
+        .nav-links a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            transition: width 0.3s ease;
+            background: linear-gradient(to right,  #6a11cb, #2575fc);
+        }
+
+        .nav-links a:hover::after{
+            width: 100%;
+        }
+
+        /*contact style*/
+        .contact{
+            padding: 3rem 2rem;
+            text-align: center;
+
+        }
+
+        .contact h1{
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 1rem;
+
+        }
+
+        .contact p{
+            font-size: 1rem;
+            margin-bottom: 2rem;
+
+        }
+
+        .support {
+            background: white;
+            padding: 1.5rem;
+           box-shadow: 0 2px 6px rgba(0,0,0, 0.05);
+           margin-bottom: 2rem;
+           border-radius: 10px;
+        }
+
+        .support a{
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .support a:hover{
+            text-decoration: underline;
+        }
+
+        /*FAQ Section*/
+        .faq-section{
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+         .faq-section h2{
+            
+            color: #2575fc;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+        }
+
+        .faq{
+            background: white;
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.1rem;
+        }
+
+        .faq h3{
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0 0 0.5rem;
+        }
+
+        .faq p{
+             line-height: 1.7;
+             margin: 0;
+             font-size: 0.97rem;
+           
+        }
+        .backhome-btn{
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+         .gradient-button{
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 0.85rem 1.8rem;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(106, 17, 203, 0.2);
+            display: inline-block;
+        }
+
+        .gradient-button:hover{
+            box-shadow: 0 6px 14px rgba(106, 17, 203, 0.4);
+            transform: scale(1.05);
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">MindMateAI </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+               <li><a href="Product.html">Products</a></li>
+                  <li><a href="Services.html">Services</a></li>
+                     <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<!--The contacts-->
+<section class="contact">
+    <h1>We're here to assist</h1>
+    <p>If you want to learn a little more about us, you're in right place!</p>
+
+    <div class="support">
+        <h2>Our Support Email:</h2>
+        <p>Email us at the following email at <a href="mailto:support@mindmate.ai">support@mindmate.ai</a> 
+        we'll try and get back to you under 24hours.</p>
+    </div>
+
+    <div class="faq-area">
+        <h2>Our Frequently Asked Questions(FAQ's)</h2>
+        <div class="faq">
+            <h3>How does MindMateAI technically work?</h3>
+            <p>Navigate over to Products Page and select "Have a chat with us now" as a start.</p>
+        </div>
+
+         <div class="faq">
+            <h3>Can I trust this software application with my inputs and conversations?</h3>
+            <p>Indeed. To keep your information secure and private, we employ encryption and privacy-first design.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Can I personalize my experience?</h3>
+            <p>Your mood monitoring, chatbot preferences, 
+               and self-care practices can all be altered to meet your needs.</p>
+        </div>
+
+         <div class="faq">
+            <h3>Are there any hidden costs I should know about while using the application?</h3>
+            <p>No, while using the standard version there are no costs involved however once 
+                you choose to buy the package deals on our product pages, monthly subscription 
+                fees will be required monthly.
+            </p>
+        </div>
+
+
+
+         <div class="backhome-btn">
+            <a href="index.html" class="gradient-button" > <-Back To Home</a>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMateAI Serives</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', sans-serif;
+            background: rgb(185, 180, 180);
+            color: #333;
+        }
+
+        .navbar{
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+        }
+        .logo{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+
+        }
+        .nav-links{
+            list-style: none;
+            gap: 1.5em;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links a{
+            color: #333;
+            font-weight: 400;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 3px;
+
+        }
+
+        .nav-links a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            transition: width 0.3s ease;
+            background: linear-gradient(to right,  #6a11cb, #2575fc);
+        }
+
+        .nav-links a:hover::after{
+            width: 100%;
+        }
+
+        /*Services section*/
+        .services{
+            text-align: center;
+            padding: 3rem 2rem;
+
+        }
+
+        .services h1{
+            margin-bottom: 3rem;
+            font-size: 3rem;
+            color: #5088ea;
+
+        }
+
+        /*Service card design*/
+        .services-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+
+        }
+
+        .services-cards{
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0, 0, 0.1);
+            align-items: flex-end;
+            display: flex;
+        }
+
+        .overlays{
+          bottom: 0;
+          height: 100%;
+          width:100%;
+          position: absolute;
+          background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2)); 
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          color: white;
+          box-sizing: border-box;
+          text-align: center;
+          transition: background 0.3s ease;
+          overflow: hidden;
+
+
+        }
+
+        .overlays h2{
+            font-size: 1.5rem;
+            text-shadow: 1 2px 4px rgba(0,0,0,0.6);
+            margin: 0 0 0.5rem;
+        }
+
+        .overlays p{
+            line-height:1.4;
+            text-shadow: 1 2px 4px rgba(0,0,0,0.6);
+            font-size: 1rem;
+            max-height: 6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .contact-btn{
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .gradient-button:hover{
+            box-shadow: 0 6px 14px rgba(106, 17, 203, 0.4);
+            transform: scale(1.05);
+
+        }
+
+        .gradient-button{
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 0.85rem 1.8rem;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(106, 17, 203, 0.2);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+   <!-- nav bar-->
+<header>
+    <nav class="navbar">
+        <div class="logo">MindMateAI </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+               <li><a href="Product.html">Products</a></li>
+                  <li><a href="Services.html">Services</a></li>
+                     <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!--The Services-->
+    <section class="services">
+        <h1>What We Offer:</h1>
+        <div class="services-grid">
+            <!--meditate part-->
+            <div class="services-cards" style="background-image: url(lady\ meditating\ beach.jpg);">
+                <div class="overlays">
+                    <h2>Meditation Services</h2>
+                    <p>Engage in breathing exercises for next level focus.</p>
+                </div>
+            </div>
+
+            <!--Self care/happiness coach-->
+             <div class="services-cards" style="background-image: url(Self\ care.jpg)">
+                <div class="overlays">
+                    <h2>Self Care Routines</h2>
+                    <p>Take part in routines that help build healthy habits and improve aspects of your life.</p>
+                </div>
+            </div>
+                <!--AI coaching practices-->
+             <div class="services-cards" style="background-image: url(AI\ Coach.jpg);">
+                <div class="overlays">
+                    <h2>AI Assisted Coaching</h2>
+                    <p>Get personalised product recommendations and step-by-step instructions from your personal assistant when using MindMate AI.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="contact-btn">
+            <a href="contact.html" class="gradient-button" >Contact Us Now -></a>
+        </div>
+    </section>
+</body>
+</html>

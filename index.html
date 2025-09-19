@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+      /*input styling her */
+        body{
+            font-family: 'Segoe UI',  sans-serif;
+            margin:0;
+            background: #f5f8fa;
+            color: #333;
+        }
+
+        .navbar{
+            justify-content: space-between;
+            display: flex;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo{
+            font-size: 1.6rem;
+            color: #4CAF50;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links{
+            list-style: none;
+            gap: 2rem;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li{
+            display: inline-block;
+        }
+
+        .nav-links a{
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 4px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px; 
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .nav-links a:hover{
+            color: #2575fc;
+        }
+
+         .nav-links a:hover::after{
+            width:100%;
+         }
+
+         .hero{
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        .gradient-button{
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            color: #2575fc;
+            background: white;
+
+        }
+
+        .gradient-button:hover {
+            box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
+            transform: scale(1.05);
+        }
+
+        .reveal-img{
+            padding: 3rem, 2rem;
+            text-align: center;
+            background: #ffffff;
+
+        }
+
+        .img-container{
+            margin: 0 auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+        }
+
+        .blurredOut-img{
+            width: 100%;
+            filter: blur(12px);
+            opacity: 0.8;
+            transition: filter 1.2s ease;
+        }
+
+        .blurredOut-img.visible{
+            filter: blur(0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">MindMateAI</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="Product.html">Products</a></li>
+                  <li><a href="Services.html">Services</a></li>
+                   <li><a href="Contact.html">Contact Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome To MindMate AI</h1>
+        <p>Your one and only wellness companion - designed to help you level up fully.</p>
+        <a href="Product.html" class="gradient-button">Take A look at our products!</a>
+    </section>
+
+    <section class="reveal-img">
+        <div class="img-container">
+            <img src="mentalhealth.jpg" alt="mentalhealth" class="blurredOut-img">
+
+        </div>
+            <script>
+              document.addEventListener("DOMContentLoaded", () =>{
+                const img = document.querySelector(".blurredOut-img");
+
+                const observer = new IntersectionObserver((entries) =>{
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting){
+                            img.classList.add("visible");
+                        }
+                        });
+                    },  {threshold: 0.5});
+                     observer.observe(img);
+                });
+
+               
+            
+            </script>
+    </section>
+</body>
+</html>
